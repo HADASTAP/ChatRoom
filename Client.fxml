@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="63.0" text="Server ip" />
+            <TextField fx:id="ipText" prefHeight="26.0" prefWidth="157.0" />
+            <Label text="  User name   " />
+            <TextField fx:id="userName">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#joinPressed" text="join" />
+            <Button mnemonicParsing="false" onAction="#leavePressed" text="leave" />
+         </children>
+      </HBox>
+      <HBox prefHeight="243.0" prefWidth="600.0">
+         <children>
+            <ListView fx:id="ls" prefHeight="246.0" prefWidth="118.0" />
+            <TextArea fx:id="textArea" prefHeight="235.0" prefWidth="481.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="content" prefHeight="26.0" prefWidth="366.0" />
+            <Button mnemonicParsing="false" onAction="#sendPressed" text="send" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
